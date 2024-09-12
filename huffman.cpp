@@ -23,7 +23,6 @@ umap<char, string> Huffman :: buildHuffmanTree(const string& str) {
 		umap<char, string> huffmanCodes;
 		huffmanCodes[root->ch] = '0';
 		return huffmanCodes;
-
 	} else {
 		while (pq.size() > 1) {
 			Node* left = pq.top(); pq.pop();
