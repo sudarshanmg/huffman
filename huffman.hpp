@@ -1,5 +1,5 @@
 #ifndef HUFFMAN_HPP
-#define HUFFMAN_CPP
+#define HUFFMAN_HPP
 
 #include <iostream>
 #include <unordered_map>
@@ -22,6 +22,8 @@ class Node {
 
 class Huffman {
 	private:
+
+		// comparator for the priority_queue
 		class Compare {
 			public:
 				bool operator()(Node* a, Node* b) {
@@ -29,6 +31,7 @@ class Huffman {
 				}
 		};
 
+		// uses DFS to traverse the tree and assign the code to the char present in the leaf node
 		void generateCodes(Node* root, string code, umap<char, string>& huffmanCodes) {
 			if (!root) return;
 			if (!root->left && !root->right) {
@@ -38,6 +41,7 @@ class Huffman {
 			generateCodes(root->right, code + "1", huffmanCodes);
 		}
 
+		// used in the destructor to free the memory by traversing the tree
 		void deleteTree(Node* node) {
 			if (!node) return;
 			deleteTree(node->left);
