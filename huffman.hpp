@@ -1,5 +1,5 @@
 #ifndef HUFFMAN_HPP
-#define HUFFMAN_CPP
+#define HUFFMAN_HPP
 
 #include <iostream>
 #include <unordered_map>
