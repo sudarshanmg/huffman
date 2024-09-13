@@ -2,7 +2,7 @@
 - Compresses files using the huffman-compression technique
 - Achieves best results (compression ratios) if the given file has many repeated characters
 - Can also encode and decode a string (legacy)
-- Takes a file as inpu and spits out a compressed file
+- Takes a file as input and spits out a compressed file
 
 ## Installation
 - Build the executable using the cmd `make`
